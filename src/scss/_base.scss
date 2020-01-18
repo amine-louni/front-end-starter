@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// Basic styles
+// -----------------------------------------------------------------------------
+
+// example:
+// https://github.com/HugoGiraudel/sass-boilerplate/blob/master/stylesheets/base/_base.scss
+
+html,
+body {
+  font-family: $font-primary;
+}
+.landing {
+  display: flex;
+  flex-direction: column;
+}
+.img-cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+[data-animation-in] {
+  opacity: 0;
+}

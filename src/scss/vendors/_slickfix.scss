@@ -1,0 +1,47 @@
+$slick-font-path: "/node_modules/slick-carousel/slick/fonts/" !default;
+$slick-font-family: "slick" !default;
+$slick-loader-path: "/node_modules/slick-carousel/slick-carousel/slick/" !default;
+$slick-arrow-color: black !default;
+
+$slick-arrow-color: white !default;
+$slick-dot-color: black !default;
+$slick-dot-color-active: $slick-dot-color !default;
+
+$slick-dot-size: 6px !default;
+$slick-opacity-default: 0.75 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;
+
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  outline: none;
+  background: transparent;
+  border: none;
+  color: rgba($primary, 5);
+  font-size: 2rem;
+  @media (max-width: 425px) {
+    display: none !important;
+  }
+  &:focus {
+    outline: 0;
+    border: none;
+  }
+  &:hover {
+    color: $primary;
+  }
+}
+
+.slick-prev,
+.custom-prev {
+  left: 30px !important;
+
+  z-index: 1;
+}
+.slick-next,
+.custom-next {
+  right: 30px;
+
+  z-index: 1 !important;
+}

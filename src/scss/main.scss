@@ -1,0 +1,24 @@
+// 7-1 Sass Architecture
+// https://sass-guidelin.es/#the-7-1-pattern
+
+// Abstracts
+// - tools and helpers
+@import "~bootstrap/scss/functions";
+@import "./variables";
+
+@import "./base";
+@import "./helpers";
+@import "./layout";
+@import "./components";
+@import "./sections";
+
+// Vendors
+// - CSS from external libraries and frameworks
+@import "./vendors/fonts";
+@import "./vendors/font_awsome-pro-5";
+@import "./vendors/bootstrap";
+@import "./vendors/slickfix";
+@import "./vendors/bootstrapfix";
+@import "./vendors/animate";
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";

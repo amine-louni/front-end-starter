@@ -1,0 +1,23 @@
+// @ MIXINS
+@mixin bg-opacity($color, $opacity) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+.overlay {
+  position: absolute;
+
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  &-primary {
+    @include bg-opacity($black, 0.3);
+  }
+}
+.overlay-container {
+  position: relative;
+  z-index: 2;
+}
