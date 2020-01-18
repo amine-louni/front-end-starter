@@ -39,7 +39,7 @@ This boilerplate with [Webpack](https://webpack.js.org/) based setup helps you b
    check the version number using `node -v` and `npm -v` commands
    ([npm is distributed with Node.js](https://www.npmjs.com/get-npm)).
 2. It is recommended to install the latest version of [Yarn](https://yarnpkg.com/en/docs/install).
-3. Clone the repo using `git clone https://github.com/amine-louni/front-end-starter.git` or [download _Front end starter Starter_]().
+3. Clone the repo using `git clone https://github.com/amine-louni/front-end-starter.git` or [download _Front end starter Starter_](https://github.com/amine-louni/front-end-starter/archive/master.zip).
 4. Open folder **front-end-starter** (command: `cd front-end-starter`) and install a packages of _HTML Starter_ via command: `yarn` or `npm install`.
 
 Now you have everything you need to run the build process.
