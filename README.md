@@ -1,20 +1,20 @@
 <img src="https://i.ibb.co/cc7JzNr/logo.png" width="300" height="auto" alt="">
 
-# Front end Starter
+# :star2: Front end Starter
 
 [![Bootstrap](https://flat.badgen.net/badge/bootstrap/4.3/7952b3)](https://getbootstrap.com)
 [![Slickcarousel](https://flat.badgen.net/badge/slickslider/1.8.1/7952b3)](https://kenwheeler.github.io/slick)
 [![Fontawesome](https://flat.badgen.net/badge/fontawsome/5/7952b3)](https://fontawesome.com/)
 [![Webpack](https://flat.badgen.net/badge/webpack/4/14aaf3)](https://webpack.js.org)
 
-Kick-start your project with [Bootstrap](https://getbootstrap.com/), the world's most popular framework and modern development workflow.
+Kick-start your project with [Bootstrap](https://getbootstrap.com/), the world's most popular framework and modern development workflow. :blush:
 This boilerplate with [Webpack](https://webpack.js.org/) based setup helps you build web apps and sites much faster.
 
 ## Features
 
 - **Live reloading** <br> browser update after changes
 - **Automatically optimizes** entry files <br> concatenate, minify and inject output files to HTML
-- **[Sass](https://sass-lang.com/) for stylesheets** <br> with [the 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern)
+- **[Sass](https://sass-lang.com/) for stylesheets**
 - **Modern JavaScript** <br> ES6 modules-based code linting by [ESLint](https://eslint.org/)
 - Older **browsers support**
   - add vendor prefixes in CSS with [Autoprefixer](https://autoprefixer.github.io/)
@@ -23,7 +23,7 @@ This boilerplate with [Webpack](https://webpack.js.org/) based setup helps you b
   - **[Webpack 4](https://webpack.js.org/)** configuration - module bundler
   - **[Bootstrap 4](http://getbootstrap.com/)** - the most popular HTML, CSS and JS framework
   - [jQuery](http://jquery.com/) - JavaScript library
-  - [Font Awesome 5](https://fontawesome.com/) - the web's most popular vector icons and social logos
+  - [Font Awesome 5](https://fontawesome.com/) - the web's most popular vector icons and social logos (the pro version :dizzy:)
   - [Google Fonts](https://fonts.google.com/) - libre licensed fonts
   - [Slick Slider]() - The web's most popular carousel out there
 - sourceMaps
