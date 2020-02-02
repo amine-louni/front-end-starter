@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="de">
+    <!---->
+    <meta charset="UTF-8">
+    <title>Slick Animation</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css">
+
+    <style>
+        body {
+            background-color: deepskyblue;
+            margin: 0px;
+
+            font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+        }
+
+        .headline {
+            text-align: center;
+            margin:30px 0px 90px 0px;
+            color: white;
+        }
+
+        #content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0px 30px;
+        }
+
+        .slick-slider {
+            background-color: white;
+            padding: 15px;
+            overflow: hidden;
+        }
+
+        .slick-track {
+            overflow: hidden;
+        }
+
+        .slick-slider-init {
+            position: relative;
+        }
+
+        [data-animation-in] {
+            opacity: 0;
+        }
+
+        .slick-prev {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .slick-next {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="content">
+
+    <div class="headline">
+        <h1>slickAnimation.js</h1>
+    </div>
+    <div class="slick-slider">
+        <div class="slick-slider-init">
+            <div class="slick-item">
+
+                <div class="slider-headline" data-animation-in="fadeIn" data-delay-in="2" data-animation-out="bounceOutUp">
+                    <h1>Headline BounceInDown</h1>
+                </div>
+
+                <div class="slider-description" data-animation-in="fadeIn">
+                    <h3>Slide 1</h3>
+                </div>
+
+                <div class="slider-content" data-animation-in="bounceInUp"  >
+                    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue.
+                        Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Maecenas sed diam
+                        eget risus varius blandit.</p>
+                </div>
+
+            </div>
+            <div class="slick-item">
+
+                <div class="slider-headline" data-animation-in="bounceInDown">
+                    <h1>Headline FadeIn</h1>
+                </div>
+
+                <div class="slider-description" data-animation-in="fadeIn">
+                    <h3>Slide 2</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/slick-carousel/slick/slick.min.js"></script>
+<script type="text/javascript" src="slick-animation.js"></script>
+
+<script type="text/javascript">
+    var sliderInit = $('.slick-slider-init');
+
+    $(document).ready(function () {
+
+        sliderInit.slick({
+            autoplay: true,
+            autoplaySpeed: 9000
+        });
+
+        sliderInit.slickAnimation();
+    });
+</script>
+
+</body>
+</html>
