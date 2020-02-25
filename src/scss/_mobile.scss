@@ -1,0 +1,17 @@
+@media only screen and (max-width: 768px) {
+  .top-menu {
+    display: block;
+
+    & div {
+      width: 49%;
+      display: inline-block;
+      margin: 0;
+    }
+  }
+  nav.navbar {
+    padding: 20px !important;
+    & .nav-item {
+      padding: 10px;
+    }
+  }
+}
