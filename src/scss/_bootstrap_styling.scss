@@ -10,7 +10,7 @@
   opacity: 1;
   transform: translateY(0);
   padding: 10px 0;
-  box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
+
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -19,6 +19,10 @@
   padding: 5px 0;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  @extend .bg-light;
+  & .nav-link {
+    color: $black !important;
+  }
 }
 .start-header.scroll-on .navbar-brand img {
   height: 28px;
@@ -86,7 +90,7 @@
   border-color: transparent;
 }
 .nav-link {
-  color: #212121 !important;
+  color: $white !important;
   font-weight: 500;
   transition: all 200ms linear;
 }
@@ -94,12 +98,14 @@
   color: $primary !important;
 }
 .nav-item.active .nav-link {
-  color: #777 !important;
+  color: $primary !important;
 }
 .nav-link {
   position: relative;
   padding: 5px 0 !important;
   display: inline-block;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 .nav-item:after {
   position: absolute;
