@@ -11,6 +11,7 @@
 @import "./layout";
 @import "./components";
 @import "./sections";
+@import "./bootstrap_styling";
 @import "./mobile";
 
 // Vendors
@@ -20,6 +21,7 @@
 @import "./vendors/bootstrap";
 @import "./vendors/slickfix";
 @import "./vendors/bootstrapfix";
+
 @import "./vendors/animate";
 @import "~slick-carousel/slick/slick.scss";
 @import "~slick-carousel/slick/slick-theme.scss";

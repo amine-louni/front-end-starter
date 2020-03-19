@@ -12,37 +12,74 @@ sliderInit.slick({
   autoplaySpeed: 9000
 });
 
-sliderInit.slickAnimation();
+/* Please ❤ this if you like it! */
 
-$(document).ready(function() {
-  // wowjs
+(function($) {
+  "use strict";
   new WOW().init();
+  sliderInit.slickAnimation();
+
+  $(function() {
+    var header = $(".start-style");
+    $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 10) {
+        header.removeClass("start-style").addClass("scroll-on");
+      } else {
+        header.removeClass("scroll-on").addClass("start-style");
+      }
+    });
+  });
+
+  //Animation
+
+  $(document).ready(function() {
+    $("body.hero-anime").removeClass("hero-anime");
+  });
+
+  //Menu On Hover
+
+  $("body").on("mouseenter mouseleave", ".nav-item", function(e) {
+    if ($(window).width() > 750) {
+      var _d = $(e.target).closest(".nav-item");
+      _d.addClass("show");
+      setTimeout(function() {
+        _d[_d.is(":hover") ? "addClass" : "removeClass"]("show");
+      }, 1);
+    }
+  });
 
   //slick
   $("#main-slider").slick({
     arrows: true,
     prevArrow:
-      '<button class="slide-arrow custom-prev"><i class="fad fa-chevron-left"></i></button>',
+      '<button class="slide-arrow custom-prev"><i class="fal text-white fa-chevron-left"></i></button>',
     nextArrow:
-      '<button class="slide-arrow custom-next"><i class="fad fa-chevron-right"></i></i></i></button>'
+      '<button class="slide-arrow custom-next"><i class="fal text-white fa-chevron-right"></i></i></i></button>'
   });
   $("#main-slider").slickAnimation();
+})(jQuery);
+// wowjs
 
-  $(function() {
-    $("li.dropdown").hover(
-      function() {
-        $(this)
-          .find(".dropdown-menu")
-          .stop(true, true)
-          .delay(200)
-          .fadeIn(400);
-      },
-      function() {
-        $(this)
-          .find(".dropdown-menu")
-          .stop(true, true)
-          .fadeOut(400);
-      }
-    );
-  });
-});
+// $(document).ready(function() {
+//
+
+//   // $(function() {
+//   //   $("li.dropdown").hover(
+//   //     function() {
+//   //       $(this)
+//   //         .find(".dropdown-menu")
+//   //         .stop(true, true)
+//   //         .delay(200)
+//   //         .fadeIn(400);
+//   //     },
+//   //     function() {
+//   //       $(this)
+//   //         .find(".dropdown-menu")
+//   //         .stop(true, true)
+//   //         .fadeOut(400);
+//   //     }
+//   //   );
+//   // });
+// });

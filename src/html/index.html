@@ -9,57 +9,40 @@
   <body>
     ${require('./partials/browserupgrade.html')}
 
-    <main>
-      <div class="landing ">
-        ${require('./partials/header.html')}
-        <div id="main-slider" class=" ">
-          <div
-            style="background-image: url('${require(`../images/slide1.jpg`)}')"
-            class="slide position-relative"
-          >
-            <div class="overlay overlay-primary"></div>
-            <div class="container  ">
-              <div class="slide__content text-white">
-                <h2 data-animation-in="fadeInUp">
-                  Slide 1
-                </h2>
-                <p data-animation-in="fadeInUp" data-delay-in="1">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laboriosam non sit delectus odit, nulla nihil.
-                </p>
-              </div>
+    <main class="hero-anime">
+      ${require('./partials/header.html')}
+      <div id="main-slider">
+        <div
+          style="background-image: url('${require(`../images/slide1.jpg`)}')"
+          class="slide position-relative"
+        >
+          <div class="overlay overlay-primary"></div>
+          <div class="container  ">
+            <div class="slide__content text-white">
+              <h2 data-animation-in="fadeInUp">
+                Slide 1
+              </h2>
+              <p data-animation-in="fadeInUp" data-delay-in="1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam non sit delectus odit, nulla nihil.
+              </p>
             </div>
           </div>
-          <div
-            style="background-image: url('${require(`../images/slide2.jpg`)}')"
-            class="slide position-relative"
-          >
-            <div class="overlay overlay-primary"></div>
-            <div class="container  ">
-              <div class="slide__content text-white">
-                <h2 data-animation-in="fadeInUp">
-                  Slide 2
-                </h2>
-                <p data-animation-in="fadeInUp" data-delay-in="1">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laboriosam non sit delectus odit, nulla nihil.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            style="background-image: url('${require(`../images/slide3.jpg`)}')"
-            class="slide  position-relative"
-          >
-            <div class="overlay overlay-primary"></div>
-            <div class="container  ">
-              <div class="slide__content text-white">
-                <h2 data-animation-in="fadeInUp">Slide 3</h2>
-                <p data-animation-in="fadeInUp" data-delay-in="1">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Laboriosam non sit delectus odit, nulla nihil.
-                </p>
-              </div>
+        </div>
+        <div
+          style="background-image: url('${require(`../images/slide1.jpg`)}')"
+          class="slide position-relative"
+        >
+          <div class="overlay overlay-primary"></div>
+          <div class="container  ">
+            <div class="slide__content text-white">
+              <h2 data-animation-in="fadeInUp">
+                Slide 2
+              </h2>
+              <p data-animation-in="fadeInUp" data-delay-in="1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Laboriosam non sit delectus odit, nulla nihil.
+              </p>
             </div>
           </div>
         </div>
