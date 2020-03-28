@@ -6,7 +6,6 @@
 @import "~bootstrap/scss/functions";
 @import "./variables";
 
-@import "./base";
 @import "./helpers";
 @import "./layout";
 @import "./components";
@@ -21,6 +20,7 @@
 @import "./vendors/bootstrap";
 @import "./vendors/slickfix";
 @import "./vendors/bootstrapfix";
+@import "./base";
 
 @import "./vendors/animate";
 @import "~slick-carousel/slick/slick.scss";

@@ -1,61 +1,69 @@
-// -----------------------------------------------------------------------------
-// Variables
-// -----------------------------------------------------------------------------
+// Cosmo 4.3.1
+// Bootswatch
 
-// Colors
+//
+// Color system
 //
 
-$white: #fff;
-$black: #222;
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #373a3c !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
 
-$blue: #81d4fa;
-$blue-2: #0288d1;
-$red: #fc5226;
-$orange: #8140fb;
-$green: #1dbab4;
+$blue: #2780e3 !default;
+$indigo: #6610f2 !default;
+$purple: #613d7c !default;
+$pink: #e83e8c !default;
+$red: #ff0039 !default;
+$orange: #f0ad4e !default;
+$yellow: #ff7518 !default;
+$green: #3fb618 !default;
+$teal: #20c997 !default;
+$cyan: #9954bb !default;
 
-$primary: $blue;
-$secondary: $blue-2;
-$success: $green;
-$info: $blue;
-$danger: $red;
+$primary: $blue !default;
+$secondary: $gray-800 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
 
-// Body
-//
-
-$body-bg: $white;
-$body-color: $black;
-
-// Typography
-//
-/*
-font-family: 'Open Sans', sans-serif;
-*/
-
-$font-primary: "Open Sans", sans-serif;
-$font-heading: "Open Sans", sans-serif;
-$font-family-sans-serif: $font-primary;
-
-$font-family-base: $font-family-sans-serif;
-
-$font-size-base: 0.7rem; // Assumes the browser default, typically `16px`
-$font-size-lg: $font-size-base * 1.25;
-$font-size-sm: $font-size-base * 0.875;
-
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-bold: 500;
-$font-weight-bolder: 900;
-
-$h1-font-size: $font-size-base * 2.75;
-$h2-font-size: $font-size-base * 2;
-$h3-font-size: $font-size-base * 1.75;
-
-$headings-font-weight: $font-weight-bolder;
-
-// Header
-//
-
-$header-bg: $body-bg;
+// Options
 
 $enable-rounded: false !default;
+
+// Body
+
+$body-color: $gray-800 !default;
+
+// Fonts
+
+$font-family-sans-serif: "Segoe UI", "Source Sans Pro", Calibri, Candara, Arial,
+  sans-serif !default;
+
+$font-size-base: 0.9375rem !default;
+
+$headings-font-weight: 300 !default;
+
+// Navbar
+
+$navbar-dark-hover-color: rgba($white, 1) !default;
+
+$navbar-light-hover-color: rgba($black, 0.9) !default;
+
+// Alerts
+
+$alert-border-width: 0 !default;
+
+// Progress bars
+
+$progress-height: 0.5rem !default;

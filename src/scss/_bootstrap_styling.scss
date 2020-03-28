@@ -19,13 +19,17 @@
   padding: 5px 0;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  @extend .bg-light;
-  & .nav-link {
+  background-color: $white !important;
+  & .nav-item:not(:last-child) .nav-link {
     color: $black !important;
+
+    &.active {
+      color: $info !important;
+    }
   }
 }
 .start-header.scroll-on .navbar-brand img {
-  height: 28px;
+  height: 70px;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -39,10 +43,12 @@
   transition: all 0.3s ease-out;
 }
 .navbar {
+  padding-right: 0 !important;
   padding: 0;
+  transition: all 200ms linear;
 }
 .navbar-brand img {
-  height: 52px;
+  height: 100px;
   width: auto;
   display: block;
   -webkit-transition: all 0.3s ease-out;
@@ -50,8 +56,7 @@
 }
 .navbar-toggler {
   float: right;
-  border: none;
-  padding-right: 0;
+  border: none !important;
 }
 .navbar-toggler:active,
 .navbar-toggler:focus {
@@ -59,26 +64,29 @@
 }
 .navbar-toggler-icon {
   width: 24px;
-  height: 17px;
+  height: 2px;
   background-image: none;
   position: relative;
-  border-bottom: 1px solid #000;
+  border-bottom: 2px solid $secondary;
   transition: all 300ms linear;
 }
 .navbar-toggler-icon:after,
 .navbar-toggler-icon:before {
   width: 24px;
   position: absolute;
-  height: 1px;
-  background-color: #000;
-  top: 0;
+  height: 2px;
+  background-color: $secondary;
+  top: 10px;
   left: 0;
   content: "";
   z-index: 2;
   transition: all 300ms linear;
 }
+
 .navbar-toggler-icon:after {
-  top: 8px;
+  top: 18px;
+
+  right: 0;
 }
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
   transform: rotate(45deg);
@@ -89,13 +97,9 @@
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
-.nav-link {
-  color: $white !important;
-  font-weight: 500;
-  transition: all 200ms linear;
-}
+
 .nav-item:hover .nav-link {
-  color: $primary !important;
+  color: $secondary !important;
 }
 .nav-item.active .nav-link {
   color: $primary !important;
@@ -104,8 +108,13 @@
   position: relative;
   padding: 5px 0 !important;
   display: inline-block;
-  font-weight: 300;
+  font-weight: 500;
+
   text-transform: uppercase;
+  color: $black !important;
+  font-size: 14px;
+
+  transition: all 200ms linear;
 }
 .nav-item:after {
   position: absolute;
@@ -118,13 +127,7 @@
   opacity: 0;
   transition: all 200ms linear;
 }
-.nav-item:hover:after {
-  bottom: 0;
-  opacity: 1;
-}
-.nav-item.active:hover:after {
-  opacity: 0;
-}
+
 .nav-item {
   position: relative;
   transition: all 200ms linear;
@@ -150,9 +153,9 @@
   transform: translate3d(0, 0px, 0);
 }
 .dropdown-menu {
-  padding: 10px !important;
+  padding: 30px;
   margin: 0;
-  font-size: 13px;
+  font-size: 15px !important;
   letter-spacing: 1px;
   color: #212121;
   background-color: #fcfaff;
@@ -160,34 +163,45 @@
   border-radius: 3px;
   box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
   transition: all 200ms linear;
+  & .nav-link {
+    font-size: 15px !important;
+  }
 }
 .dropdown-toggle::after {
   display: none;
 }
 
 .dropdown-item {
-  padding: 3px 15px;
-  color: #212121;
+  padding: 15px 20px;
+  color: $black;
   border-radius: 2px;
   transition: all 200ms linear;
+  border-left: 2px solid transparent !important;
+  @media (min-width: 767px) {
+    padding-right: 2rem !important;
+    padding-bottom: 10px !important;
+    padding-top: 10px !important;
+  }
 }
 .dropdown-item:hover,
 .dropdown-item:focus {
   color: #fff;
-  background-color: rgba(129, 103, 169, 0.6);
+  border-left-color: $primary !important;
 }
 
 /* #Media
 ================================================== */
 
 @media (max-width: 767px) {
-  .navigation-wrap {
+  #navbar {
     background: $white !important;
     & .nav-link {
       color: $black !important;
     }
   }
-
+  .nav-item {
+    margin-bottom: 27px;
+  }
   .dropdown-toggle::after {
     border: none !important;
   }
@@ -233,4 +247,29 @@
     margin-top: 10px !important;
     margin-bottom: 20px !important;
   }
+}
+
+.btn {
+  margin: 0 !important;
+  border: none !important;
+  overflow: visible !important;
+  font: inherit;
+  color: inherit;
+
+  -webkit-appearance: none;
+  display: inline-block !important;
+  box-sizing: border-box !important;
+  padding: 0 30px !important;
+  vertical-align: middle !important;
+  font-size: 13px;
+  line-height: 38px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  transition: 0.1s ease-in-out !important;
+  transition-property: color, background-color, border-color !important;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: none !important;
 }

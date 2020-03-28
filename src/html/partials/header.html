@@ -1,11 +1,13 @@
-<header class="navigation-wrap  start-header start-style">
-  <div class="container">
-    <nav class="navbar navbar-expand-md navbar-light bg-transparent">
-      <a
-        class="navbar-brand"
-        href="https://themeforest.net/user/ig_design/portfolio"
-        target="_blank"
-        ><img src="../../images/logo.png" height="60px" alt=""
+<header class="navigation-wrap ">
+  <nav
+    id="navbar"
+    class="navbar navbar-expand-md navbar-light bg-transparent  fixed-top  start-header start-style"
+  >
+    <div class="container">
+      <a class="navbar-brand" href="#"
+        ><img src="../../images/logo.png" alt=""/>
+
+        <img class="d-none" src="../../images/logo.png" alt=""
       /></a>
 
       <button
@@ -21,55 +23,49 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto py-4 py-md-0">
-          <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
+        <ul id="navbar-nav" class="navbar-nav ml-auto py-4 py-md-0">
+          <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3">
+            <a class="nav-link" href="#home">Accueil</a>
+          </li>
+          <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3">
+            <a class="nav-link" href="#about">Présentation</a>
+          </li>
+
+          <li class="nav-item dropdown pl-4 pl-md-0 ml-0 ml-md-3">
             <a
               class="nav-link dropdown-toggle"
-              data-toggle="dropdown"
               href="#"
+              id="navbarDropdown"
               role="button"
+              data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
-              >Home</a
             >
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item " href="#">Action</a>
               <a class="dropdown-item" href="#">Another action</a>
             </div>
           </li>
-          <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-            <a class="nav-link" href="#">Portfolio</a>
+
+          <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3">
+            <a class="nav-link" href="#functions">Fonctionnalité </a>
           </li>
-          <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-            <a class="nav-link" href="#">Agency</a>
+          <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3">
+            <a class="nav-link" href="#pricing">Pricing</a>
           </li>
-          <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+          <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-3 d-none d-md-block">
             <a
-              class="nav-link dropdown-toggle"
-              data-toggle="dropdown"
-              href="#"
-              role="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Services</a
+              data-toggle="modal"
+              data-target="#exampleModal"
+              class="nav-link btn btn-primary    text-white "
+              href="#contct"
+              >Contact</a
             >
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <a class="dropdown-item" href="#">Another action</a>
-            </div>
-          </li>
-          <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-            <a class="nav-link" href="#">Journal</a>
-          </li>
-          <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-            <a class="nav-link" href="#">Contact</a>
           </li>
         </ul>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </header>
