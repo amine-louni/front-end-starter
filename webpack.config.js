@@ -1,18 +1,22 @@
 const path = require("path");
+const glob = require("glob");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const PurgecssPlugin = require("purgecss-webpack-plugin");
+const PATHS = {
+  src: path.join(__dirname, "src"),
+};
 module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "./js/index.bundle.js"
+    filename: "./js/index.bundle.js",
   },
   // Generate sourcemaps for proper error messages
   devtool: "source-map",
   performance: {
     // Turn off size warnings for entry points
-    hints: false
+    hints: false,
   },
   module: {
     rules: [
@@ -23,9 +27,9 @@ module.exports = {
           // Interpolation syntax for ES6 template strings
           interpolate: true,
           // Disable minifcation during production mode
-          minimize: false
+          minimize: false,
         },
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.(css|sass|scss)$/,
@@ -33,45 +37,45 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: "../"
-            }
+              publicPath: "../",
+            },
           },
           {
             loader: "css-loader",
             options: {
               importLoaders: 2,
-              sourceMap: true
-            }
+              sourceMap: true,
+            },
           },
           {
-            loader: "resolve-url-loader"
+            loader: "resolve-url-loader",
           },
           {
             loader: "postcss-loader",
             options: {
               plugins: () => [require("autoprefixer")],
-              sourceMap: true
-            }
+              sourceMap: true,
+            },
           },
           {
             loader: "sass-loader",
             options: {
-              sourceMap: true
-            }
-          }
+              sourceMap: true,
+            },
+          },
         ],
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         enforce: "pre", // checked before being processed by babel-loader
         test: /\.(js)$/,
         loader: "eslint-loader",
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.(js)$/,
         loader: "babel-loader",
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/,
@@ -86,8 +90,8 @@ module.exports = {
                   return `images/${url}`;
                 }
               },
-              name: "[name].[ext]"
-            }
+              name: "[name].[ext]",
+            },
           },
           {
             loader: "image-webpack-loader",
@@ -95,53 +99,57 @@ module.exports = {
               disable: process.env.NODE_ENV !== "production", // Disable during development
               mozjpeg: {
                 progressive: true,
-                quality: 75
-              }
-            }
-          }
+                quality: 75,
+              },
+            },
+          },
         ],
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /(favicon\.ico|site\.webmanifest|browserconfig\.xml|robots\.txt|humans\.txt)$/,
         loader: "file-loader",
         options: {
-          name: "[name].[ext]"
+          name: "[name].[ext]",
         },
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.(woff(2)?|ttf|eot)(\?[a-z0-9=.]+)?$/,
         loader: "file-loader",
         options: {
           outputPath: "fonts",
-          name: "[name].[ext]"
+          name: "[name].[ext]",
         },
-        exclude: /node_modules/
-      }
-    ]
+        exclude: /node_modules/,
+      },
+    ],
   },
   // DevServer
   // https://webpack.js.org/configuration/dev-server/
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
-    port: 9000
+    port: 9000,
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/html/index.html",
       filename: "index.html",
-      hash: true
+      hash: true,
     }),
     new HtmlWebpackPlugin({
       template: "./src/html/elements.html",
       filename: "elements.html",
-      hash: true
+      hash: true,
     }),
 
     new MiniCssExtractPlugin({
-      filename: "./css/styles.css"
-    })
-  ]
+      filename: "./css/styles.css",
+    }),
+    new PurgecssPlugin({
+      paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+      whitelistPatterns: [/(slick|animated)/],
+    }),
+  ],
 };

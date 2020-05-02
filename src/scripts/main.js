@@ -2,26 +2,26 @@
 import "./vendor/jquery";
 import "./vendor/bootstrap";
 import "slick-carousel";
-import "../../bower_components/slick-animation/slick-animation";
-
+//import "../../bower_components/slick-animation/slick-animation";
+import "./vendor/slick-animation.min.js";
 import { WOW } from "wowjs";
 var sliderInit = $(".slick-slider-init");
 
 sliderInit.slick({
   autoplay: true,
-  autoplaySpeed: 9000
+  autoplaySpeed: 9000,
 });
 
 /* Please ❤ this if you like it! */
 
-(function($) {
+(function ($) {
   "use strict";
   new WOW().init();
   sliderInit.slickAnimation();
 
-  $(function() {
+  $(function () {
     var header = $(".start-style");
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       var scroll = $(window).scrollTop();
 
       if (scroll >= 10) {
@@ -36,11 +36,11 @@ sliderInit.slick({
 
   //Menu On Hover
 
-  $("body").on("mouseenter mouseleave", ".nav-item", function(e) {
+  $("body").on("mouseenter mouseleave", ".nav-item", function (e) {
     if ($(window).width() > 750) {
       var _d = $(e.target).closest(".nav-item");
       _d.addClass("show");
-      setTimeout(function() {
+      setTimeout(function () {
         _d[_d.is(":hover") ? "addClass" : "removeClass"]("show");
       }, 1);
     }
@@ -52,7 +52,7 @@ sliderInit.slick({
     prevArrow:
       '<button class="slide-arrow custom-prev"><i class="fal text-white fa-chevron-left"></i></button>',
     nextArrow:
-      '<button class="slide-arrow custom-next"><i class="fal text-white fa-chevron-right"></i></i></i></button>'
+      '<button class="slide-arrow custom-next"><i class="fal text-white fa-chevron-right"></i></i></i></button>',
   });
   $("#main-slider").slickAnimation();
 })(jQuery);
