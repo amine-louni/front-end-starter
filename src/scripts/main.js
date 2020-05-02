@@ -2,7 +2,6 @@
 import "./vendor/jquery";
 import "./vendor/bootstrap";
 import "slick-carousel";
-//import "../../bower_components/slick-animation/slick-animation";
 import "./vendor/slick-animation.min.js";
 import { WOW } from "wowjs";
 var sliderInit = $(".slick-slider-init");
@@ -56,26 +55,3 @@ sliderInit.slick({
   });
   $("#main-slider").slickAnimation();
 })(jQuery);
-// wowjs
-
-// $(document).ready(function() {
-//
-
-//   // $(function() {
-//   //   $("li.dropdown").hover(
-//   //     function() {
-//   //       $(this)
-//   //         .find(".dropdown-menu")
-//   //         .stop(true, true)
-//   //         .delay(200)
-//   //         .fadeIn(400);
-//   //     },
-//   //     function() {
-//   //       $(this)
-//   //         .find(".dropdown-menu")
-//   //         .stop(true, true)
-//   //         .fadeOut(400);
-//   //     }
-//   //   );
-//   // });
-// });
