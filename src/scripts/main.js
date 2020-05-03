@@ -1,8 +1,10 @@
 // Vendors
 import "./vendor/jquery";
 import "./vendor/bootstrap";
-import "slick-carousel";
+//import "slick-carousel";
+
 import "./vendor/slick-animation.min.js";
+import "./vendor/slick.min.js";
 import { WOW } from "wowjs";
 
 (function ($) {
@@ -34,9 +36,9 @@ import { WOW } from "wowjs";
   $("#main-slider").slick({
     arrows: true,
     prevArrow:
-      '<button class="slide-arrow custom-prev"><i class="fal text-white fa-chevron-left"></i></button>',
+      '<button class="slide-arrow custom-prev"><i class="fal text-white fa-chevron-left d-none d-md-block"></i></button>',
     nextArrow:
-      '<button class="slide-arrow custom-next"><i class="fal text-white fa-chevron-right"></i></i></i></button>',
+      '<button class="slide-arrow custom-next"><i class="fal text-white fa-chevron-right d-none d-md-block"></i></i></i></button>',
   });
   $("#main-slider").slickAnimation();
 

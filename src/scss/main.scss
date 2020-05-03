@@ -18,11 +18,13 @@
 @import "./vendors/fonts";
 @import "./vendors/font_awsome-pro-5";
 @import "./vendors/bootstrap";
+@import "./vendors/animate";
+@import "./vendors/slick/slick.scss";
+@import "./vendors/slick/slick-theme.scss";
 @import "./vendors/slickfix";
 
 @import "./base";
 @import "./theme";
 
-@import "./vendors/animate";
-@import "~slick-carousel/slick/slick.scss";
-@import "~slick-carousel/slick/slick-theme.scss";
+// @import "~slick-carousel/slick/slick.scss";
+// @import "~slick-carousel/slick/slick-theme.scss";

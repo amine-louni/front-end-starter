@@ -1,6 +1,6 @@
 .slide {
   background-size: cover;
-  height: 100vh;
+  height: 100vh !important;
   & > .container {
     @extend .overlay-container;
     height: 100%;

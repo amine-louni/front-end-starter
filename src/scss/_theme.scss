@@ -1,72 +1,87 @@
-// Litera 4.3.1
+// Minty 4.3.1
 // Bootswatch
 
 // Variables ===================================================================
 
-$font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif !default;
+$web-font-path: "https://fonts.googleapis.com/css?family=Montserrat&display=swap" !default;
+@import url($web-font-path);
 
 // Navbar ======================================================================
 
 .navbar {
-  font-size: $font-size-sm;
+  font-family: $headings-font-family;
+}
 
-  &.bg-dark {
-    background-color: $success !important;
-  }
+.bg-dark {
+  background-color: $secondary !important;
+}
 
-  &.bg-light {
-    background-color: #fff !important;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-
-    &.navbar-fixed-top {
-      border-width: 0 0 1px 0;
-    }
-
-    &.navbar-fixed-bottom {
-      border-width: 1px 0 0 0;
-    }
-  }
+.border-dark {
+  border-color: $secondary !important;
 }
 
 // Buttons =====================================================================
 
 .btn {
-  border-radius: 1.078em;
+  font-family: $headings-font-family;
 
-  &-lg {
-    border-radius: 2.688em;
+  &,
+  &:hover {
+    color: $white;
   }
 
-  &-sm {
-    border-radius: 0.844em;
+  &-light,
+  &-light:hover {
+    color: $gray-700;
+  }
+
+  &-link,
+  &-link:hover {
+    color: $primary;
+  }
+
+  &-link.disabled:hover {
+    color: $gray-600;
+  }
+
+  &-outline-primary {
+    color: $primary;
+  }
+
+  &-outline-secondary {
+    color: $secondary;
+  }
+
+  &-outline-success {
+    color: $success;
+  }
+
+  &-outline-info {
+    color: $info;
+  }
+
+  &-outline-warning {
+    color: $warning;
+  }
+
+  &-outline-danger {
+    color: $danger;
+  }
+
+  &-outline-dark {
+    color: $dark;
+  }
+
+  &-outline-light {
+    color: $light;
   }
 }
 
 // Typography ==================================================================
 
-p {
-  font-family: $font-family-serif;
-}
-
-blockquote {
-  font-style: italic;
-}
-
-footer {
-  font-size: $font-size-sm;
-}
-
-.lead {
-  color: $gray-600;
-  font-family: $font-family-sans-serif;
-}
-
 // Tables ======================================================================
 
-table,
 .table {
-  font-size: $font-size-sm;
-
   &-primary,
   &-secondary,
   &-success,
@@ -75,9 +90,7 @@ table,
   &-danger {
     color: #fff;
   }
-}
 
-.table {
   &-primary {
     &,
     > th,
@@ -223,55 +236,123 @@ table,
       }
     }
   }
+
+  .thead-dark th {
+    background-color: $primary;
+    border-color: $table-border-color;
+    font-family: $headings-font-family;
+  }
 }
 
 // Forms =======================================================================
 
-// Navs ========================================================================
-
-.nav,
-.breadcrumb,
-.pagination {
-  font-size: $font-size-sm;
+legend {
+  font-family: $headings-font-family;
 }
 
+// Navs ========================================================================
+
 .dropdown-menu {
-  font-size: $font-size-sm;
+  font-family: $font-family-sans-serif;
+}
+
+.breadcrumb {
+  a {
+    color: $navbar-dark-color;
+  }
+
+  a:hover {
+    color: $white;
+    text-decoration: none;
+  }
 }
 
 // Indicators ==================================================================
 
 .alert {
   color: $white;
-  font-size: $font-size-sm;
 
-  &,
-  p {
-    font-family: $font-family-sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: inherit;
   }
 
   a,
   .alert-link {
-    color: #fff;
-    font-weight: normal;
-    text-decoration: underline;
+    color: $white;
   }
 
-  @each $color, $value in $theme-colors {
-    &-#{$color} {
-      @if $enable-gradients {
-        background: $value
-          linear-gradient(0deg, mix($body-bg, $value, 15%), $value)
-          repeat-x;
-      } @else {
-        background-color: $value;
-      }
+  &-primary {
+    &,
+    > th,
+    > td {
+      background-color: $primary;
+    }
+  }
+
+  &-secondary {
+    &,
+    > th,
+    > td {
+      background-color: $secondary;
+    }
+  }
+
+  &-success {
+    &,
+    > th,
+    > td {
+      background-color: $success;
+    }
+  }
+
+  &-info {
+    &,
+    > th,
+    > td {
+      background-color: $info;
+    }
+  }
+
+  &-danger {
+    &,
+    > th,
+    > td {
+      background-color: $danger;
+    }
+  }
+
+  &-warning {
+    &,
+    > th,
+    > td {
+      background-color: $warning;
+    }
+  }
+
+  &-dark {
+    &,
+    > th,
+    > td {
+      background-color: $dark;
     }
   }
 
   &-light {
     &,
-    & a,
+    > th,
+    > td {
+      background-color: $light;
+    }
+  }
+
+  &-light {
+    &,
+    & a:not(.btn),
     & .alert-link {
       color: $body-color;
     }
@@ -279,13 +360,25 @@ table,
 }
 
 .badge {
-  vertical-align: bottom;
+  color: $white;
+
+  &-light {
+    color: $gray-700;
+  }
 }
 
 // Progress bars ===============================================================
 
 // Containers ==================================================================
 
-.list-group {
-  font-size: $font-size-sm;
+.card,
+.list-group-item {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: inherit;
+  }
 }
