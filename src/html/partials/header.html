@@ -12,12 +12,32 @@
             >Home <span class="sr-only">(current)</span></a
           >
         </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Features</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
         </li>
+
         <li class="nav-item">
           <a
             class="nav-link disabled"
@@ -37,16 +57,40 @@
     </div>
     <nav class="">
       <ul class="flex-column list-unstyled">
-        <li class="pl-4 p-2">
+        <li class="px-3 py-2">
           <a class="text-dark" href="#">Active</a>
         </li>
-        <li class="pl-4 p-2">
+        <li class="px-3 py-2">
           <a class="text-dark" href="#">Link</a>
         </li>
-        <li class="pl-4 p-2">
+        <li class="px-3 py-2 drawer-dropdown position-relative">
+          <a
+            data-toggle="collapse"
+            href="#collapseExample"
+            role="button"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+          >
+            Dropdown
+          </a>
+          <div class="collapse" id="collapseExample">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="fal fa-chevron-circle-right"></i> hello
+              </li>
+              <li class="list-group-item">
+                <i class="fal fa-chevron-circle-right"></i> hello
+              </li>
+              <li class="list-group-item">
+                <i class="fal fa-chevron-circle-right"></i> hello
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="px-3 py-2">
           <a class="text-dark" href="#">Link</a>
         </li>
-        <li class="pl-4 p-2">
+        <li class="px-3 py-2">
           <a class="text-dark" href="#">Disabled</a>
         </li>
       </ul>

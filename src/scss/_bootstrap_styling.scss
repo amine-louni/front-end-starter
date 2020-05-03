@@ -53,3 +53,10 @@
   background-color: $gray-200;
   border-left-color: $primary !important;
 }
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+  color: #343a40;
+  border-radius: 7px;
+  background-color: #f2f2f2;
+}

@@ -17,4 +17,31 @@
       left: 0;
     }
   }
+
+  & .drawer-dropdown {
+    & a {
+      color: $dark !important;
+      text-decoration: none;
+    }
+
+    &::after {
+      font-family: "Font Awesome 5 Pro";
+      font-weight: 300;
+      content: "\f13a";
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 8px;
+    }
+  }
+}
+.dropdown-toggle {
+  display: inline-flex !important;
+  align-items: center;
+}
+.dropdown-toggle::after {
+  font-family: "Font Awesome 5 Pro" !important;
+  font-weight: 300;
+  content: "\f13a" !important;
+  border: none !important;
 }
