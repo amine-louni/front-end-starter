@@ -9,7 +9,7 @@ const PATHS = {
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "build"),
     filename: "./js/index.bundle.js",
   },
   // Generate sourcemaps for proper error messages
@@ -147,9 +147,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "./css/styles.css",
     }),
-    new PurgecssPlugin({
-      paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
-      whitelistPatterns: [/(slick|animated)/],
-    }),
+    // new PurgecssPlugin({
+    //   paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+    //   whitelistPatterns: [/(slick|animated)/],
+    // }),
   ],
 };

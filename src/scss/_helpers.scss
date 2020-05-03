@@ -56,3 +56,11 @@
   background: rgba(0, 0, 0, 0);
   transition: all 200ms linear;
 }
+.body-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.651);
+  display: none;
+  z-index: 50 !important;
+}
