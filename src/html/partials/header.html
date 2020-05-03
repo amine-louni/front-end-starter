@@ -1,62 +1,31 @@
 <header>
-  <nav class="navbar navbar-expand-md navbar-light bg-light">
-    <div id="drawer-toggler" class="mr-3 d-block d-md-none">
-      <i class="fas fa-bars"></i>
+  <div class="uk-position-top">
+    <div class="uk-container uk-container-small">
+      <nav class="uk-navbar-container uk-navbar-transparent" data-uk-navbar>
+        <div class="uk-navbar-left">
+          <div class="uk-navbar-item">
+            <a class="uk-logo" href=""> Logo</a>
+          </div>
+        </div>
+        <div class="uk-navbar-right">
+          <ul class="uk-navbar-nav">
+            <li class="uk-active uk-visible@m">
+              <a href="" data-uk-icon="home"></a>
+            </li>
+            <li class="uk-visible@s"><a href="">Features</a></li>
+            <li class="uk-visible@s"><a href="">Security</a></li>
+            <li class="uk-visible@s"><a href="">Testimonials</a></li>
+            <li>
+              <a
+                class="uk-navbar-toggle uk-hidden@m"
+                data-uk-toggle
+                data-uk-navbar-toggle-icon
+                href="#offcanvas-nav"
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
-    <a class="navbar-brand" href="#">Navbar</a>
-
-    <div class="collapse navbar-collapse ml-auto">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"
-            >Home <span class="sr-only">(current)</span></a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link disabled"
-            href="#"
-            tabindex="-1"
-            aria-disabled="true"
-            >Disabled</a
-          >
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <aside class="drawer shadow-lg d-flex flex-column">
-    <div class="drawer__logo p-5 bg-white text-center">
-      Logo
-    </div>
-    <nav class="">
-      <ul class="flex-column list-unstyled">
-        <li class="pl-4 p-2">
-          <a class="text-dark" href="#">Active</a>
-        </li>
-        <li class="pl-4 p-2">
-          <a class="text-dark" href="#">Link</a>
-        </li>
-        <li class="pl-4 p-2">
-          <a class="text-dark" href="#">Link</a>
-        </li>
-        <li class="pl-4 p-2">
-          <a class="text-dark" href="#">Disabled</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="text-center drawer__copyrights position-relative flex-grow-1">
-      <small class="text-muted position-absolute w-100 py-4 bg-white"
-        >Sur les nuages d'ORCLOUD</small
-      >
-    </div>
-  </aside>
-
-  <div class="body-overlay fixed-top h-100 w-100"></div>
+  </div>
 </header>

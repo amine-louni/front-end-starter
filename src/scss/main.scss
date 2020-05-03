@@ -3,26 +3,32 @@
 
 // Abstracts
 // - tools and helpers
-@import "~bootstrap/scss/functions";
+
+// 1. Your custom variables and variable overwrites.
 @import "./variables";
+
+// 2. Import default variables and available mixins.
+@import "~uikit/src/scss/variables-theme.scss";
+@import "~uikit/src/scss/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+@mixin hook-card() {
+  color: #000;
+}
+
+// 4. Import UIkit.
+@import "uikit/src/scss/uikit-theme.scss";
 
 @import "./helpers";
 @import "./layout";
 @import "./components";
 @import "./sections";
-@import "./bootstrap_styling";
+
 @import "./mobile";
 
 // Vendors
 // - CSS from external libraries and frameworks
-@import "./vendors/fonts";
+
 @import "./vendors/font_awsome-pro-5";
-@import "./vendors/bootstrap";
-@import "./vendors/slickfix";
 
 @import "./base";
-@import "./theme";
-
-@import "./vendors/animate";
-@import "~slick-carousel/slick/slick.scss";
-@import "~slick-carousel/slick/slick-theme.scss";
