@@ -24,7 +24,6 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@material/ripple": "^6.0.0",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.0",
     "popper.js": "^1.15.0",
