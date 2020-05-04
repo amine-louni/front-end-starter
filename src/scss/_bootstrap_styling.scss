@@ -36,18 +36,6 @@
   display: none;
 }
 
-.dropdown-item {
-  padding: 15px 20px;
-  color: $black;
-  border-radius: 2px;
-  transition: all 200ms linear;
-  border-left: 2px solid transparent !important;
-  @media (min-width: 767px) {
-    padding-right: 2rem !important;
-    padding-bottom: 10px !important;
-    padding-top: 10px !important;
-  }
-}
 .dropdown-item:hover,
 .dropdown-item:focus {
   background-color: $gray-200;
@@ -64,21 +52,7 @@
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 0.7) !important;
 }
-/* Ripple effect */
-.ripple {
-  background-position: center;
-  transition: background 0.8s;
-}
-.ripple:hover {
-  background: $gray-100 radial-gradient(circle, transparent 1%, $gray-100 1%)
-    center/15000%;
-}
-.ripple:active {
-  background-color: $gray-200;
-  background-size: 100%;
-  transition: background 0s;
-}
-
-a {
-  @extend .ripple;
+.btn {
+  @extend .px-4;
+  @extend .py-2;
 }

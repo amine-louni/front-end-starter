@@ -147,9 +147,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "./css/styles.css",
     }),
-    // new PurgecssPlugin({
-    //   paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
-    //   whitelistPatterns: [/(slick|animated)/],
-    // }),
+    new PurgecssPlugin({
+      paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+      whitelistPatterns: [/(slick|animated|open)/],
+    }),
   ],
 };
