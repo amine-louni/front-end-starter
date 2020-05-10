@@ -32,6 +32,25 @@ sliderInit.slick({
   });
 
   //Animation
+  //Animation
+  $("#main-slider").on("afterChange init", function (event, slick) {
+    // remove all prev/next
+    console.log(slick.$slides);
+    // find current slide
+    for (var i = 0; i < slick.$slides.length; i++) {
+      var $slide = $(slick.$slides[i]);
+      if ($slide.hasClass("slick-current")) {
+        // update DOM siblings
+        $slide.find(".slide__bg-img").addClass("animateInOut");
+
+        // $slide.prev().find(".slide__bg-img").removeClass("animateInOut");
+        // $slide.next().find(".slide__bg-img").addClass("animateInOut");
+      } else {
+        $slide.find(".slide__bg-img").removeClass("animateInOut");
+        console.log("not");
+      }
+    }
+  });
 
   //Menu On Hover
 
