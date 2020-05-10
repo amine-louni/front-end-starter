@@ -2,6 +2,7 @@
 ================================================== */
 .nav-item {
   font-size: 0.9rem;
+  color: $black;
 }
 
 .nav-item .dropdown-menu {
@@ -53,8 +54,11 @@
   border-radius: 7px;
   background-color: #f2f2f2;
 }
-.navbar-light .navbar-nav .nav-link:not(.active) .nav-link {
-  color: rgba(0, 0, 0, 0.7) !important;
+.navbar-light .navbar-nav .nav-item:not(.active) .nav-link {
+  color: rgb(0, 0, 0);
+}
+.navbar-light .navbar-nav .nav-item.active .nav-link {
+  color: $primary;
 }
 .btn {
   @extend .px-4;
