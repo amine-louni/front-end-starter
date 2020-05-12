@@ -139,8 +139,28 @@ module.exports = {
       hash: true,
     }),
     new HtmlWebpackPlugin({
-      template: "./src/html/elements.html",
-      filename: "elements.html",
+      template: "./src/html/about.html",
+      filename: "about.html",
+      hash: true,
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/html/contact.html",
+      filename: "contact.html",
+      hash: true,
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/html/archive.html",
+      filename: "archive.html",
+      hash: true,
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/html/single.html",
+      filename: "single.html",
+      hash: true,
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/html/index.html",
+      filename: "index.html",
       hash: true,
     }),
 
