@@ -9,7 +9,7 @@ const PATHS = {
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "dist"),
     filename: "./js/index.bundle.js",
   },
   // Generate sourcemaps for proper error messages
@@ -64,12 +64,6 @@ module.exports = {
             },
           },
         ],
-        exclude: /node_modules/,
-      },
-      {
-        enforce: "pre", // checked before being processed by babel-loader
-        test: /\.(js)$/,
-        loader: "eslint-loader",
         exclude: /node_modules/,
       },
       {
@@ -139,37 +133,17 @@ module.exports = {
       hash: true,
     }),
     new HtmlWebpackPlugin({
-      template: "./src/html/about.html",
-      filename: "about.html",
-      hash: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/html/contact.html",
-      filename: "contact.html",
-      hash: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/html/archive.html",
-      filename: "archive.html",
-      hash: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/html/single.html",
-      filename: "single.html",
-      hash: true,
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/html/index.html",
-      filename: "index.html",
+      template: "./src/html/elements.html",
+      filename: "elements.html",
       hash: true,
     }),
 
     new MiniCssExtractPlugin({
       filename: "./css/styles.css",
     }),
-    new PurgecssPlugin({
-      paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
-      whitelistPatterns: [/(slick|animated|open)/],
-    }),
+    // new PurgecssPlugin({
+    //   paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+    //   whitelistPatterns: [/(slick|animated)/],
+    // }),
   ],
 };

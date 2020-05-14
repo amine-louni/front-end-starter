@@ -14,7 +14,7 @@
   right: 0;
   bottom: 0;
   &-primary {
-    @include bg-opacity($black, 0.3);
+    @include bg-opacity($black, 0.7);
   }
 }
 .overlay-container {
