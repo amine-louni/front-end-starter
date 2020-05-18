@@ -87,16 +87,6 @@ module.exports = {
               name: "[name].[ext]",
             },
           },
-          {
-            loader: "image-webpack-loader",
-            options: {
-              disable: process.env.NODE_ENV !== "production", // Disable during development
-              mozjpeg: {
-                progressive: true,
-                quality: 75,
-              },
-            },
-          },
         ],
         exclude: /node_modules/,
       },
