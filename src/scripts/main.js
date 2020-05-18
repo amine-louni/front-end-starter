@@ -1,5 +1,6 @@
 // Vendors
-import "./vendor/jquery";
+import "jquery/dist/jquery.slim.js";
+
 import "./vendor/bootstrap";
 //import "slick-carousel";
 

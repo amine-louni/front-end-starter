@@ -3,9 +3,12 @@ const glob = require("glob");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const PurgecssPlugin = require("purgecss-webpack-plugin");
+const webpack = require("webpack");
+
 const PATHS = {
   src: path.join(__dirname, "src"),
 };
+
 module.exports = {
   entry: "./src/index.js",
   output: {
@@ -17,6 +20,12 @@ module.exports = {
   performance: {
     // Turn off size warnings for entry points
     hints: false,
+  },
+  resolve: {
+    extensions: [".js"],
+    alias: {
+      jquery: "jquery/dist/jquery.slim.js",
+    },
   },
   module: {
     rules: [
@@ -117,6 +126,10 @@ module.exports = {
     port: 9000,
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+    }),
     new HtmlWebpackPlugin({
       template: "./src/html/index.html",
       filename: "index.html",
