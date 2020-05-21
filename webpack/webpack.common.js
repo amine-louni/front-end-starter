@@ -1,7 +1,7 @@
 const path = require("path");
 const glob = require("glob");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 const PurgecssPlugin = require("purgecss-webpack-plugin");
 const webpack = require("webpack");
 
@@ -12,8 +12,9 @@ const PATHS = {
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "../build"),
     filename: "./js/index.bundle.js",
+    pathinfo: false,
   },
   // Generate sourcemaps for proper error messages
   devtool: "source-map",
@@ -40,45 +41,11 @@ module.exports = {
         },
         exclude: /node_modules/,
       },
-      {
-        test: /\.(css|sass|scss)$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: "../",
-            },
-          },
-          {
-            loader: "css-loader",
-            options: {
-              importLoaders: 2,
-              sourceMap: true,
-            },
-          },
-          {
-            loader: "resolve-url-loader",
-          },
-          {
-            loader: "postcss-loader",
-            options: {
-              plugins: () => [require("autoprefixer")],
-              sourceMap: true,
-            },
-          },
-          {
-            loader: "sass-loader",
-            options: {
-              sourceMap: true,
-            },
-          },
-        ],
-        exclude: /node_modules/,
-      },
+
       {
         test: /\.(js)$/,
         loader: "babel-loader",
-        exclude: /node_modules/,
+        include: path.resolve(__dirname, "src"),
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/,
@@ -118,13 +85,7 @@ module.exports = {
       },
     ],
   },
-  // DevServer
-  // https://webpack.js.org/configuration/dev-server/
-  devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    compress: true,
-    port: 9000,
-  },
+
   plugins: [
     new webpack.ProvidePlugin({
       $: "jquery",
@@ -141,9 +102,6 @@ module.exports = {
       hash: true,
     }),
 
-    new MiniCssExtractPlugin({
-      filename: "./css/styles.css",
-    }),
     // new PurgecssPlugin({
     //   paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
     //   whitelistPatterns: [/(slick|animated)/],
