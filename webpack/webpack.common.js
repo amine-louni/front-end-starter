@@ -11,6 +11,7 @@ const PATHS = {
 
 module.exports = {
   entry: "./src/index.js",
+  stats: "minimal",
   output: {
     path: path.resolve(__dirname, "../build"),
     filename: "./js/index.bundle.js",
