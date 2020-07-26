@@ -18,7 +18,7 @@
     "dev:watch": "set NODE_ENV=development&& webpack --mode development --watch",
     "build": "set NODE_ENV=production&& webpack -p",
     "prod": "npm run build",
-    "start": "set NODE_ENV=development&& webpack-dev-server --mode development --open",
+    "start": "set NODE_ENV=development&& webpack-dev-server --mode development",
     "watch": "npm run dev:watch",
     "lint": "eslint assets/scripts/*.js",
     "clean": "rm -rf dist"
