@@ -14,7 +14,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "serve": "webpack-dev-server --open --config  webpack/webpack.dev.js",
+    "serve": "webpack-dev-server  --config  webpack/webpack.dev.js",
     "build": "webpack --config webpack/webpack.prod.js",
     "deploy": "npm run clean && npm run build && netlify deploy -p -d build",
     "clean": "rm -rf build"
