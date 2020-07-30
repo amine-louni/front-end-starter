@@ -2,10 +2,12 @@
   background-size: cover;
   height: 100vh !important;
   overflow: hidden;
-  & > .container {
+
+  &>.container {
     @extend .overlay-container;
     height: 100%;
   }
+
   &__bg-img {
     position: absolute;
     z-index: -1;
@@ -22,6 +24,7 @@
       animation-play-state: running;
     }
   }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -36,11 +39,20 @@
     }
   }
 }
+
 @keyframes zoomInOut {
   from {
     transform: scale(1.3);
   }
+
   to {
     transform: scale(1);
   }
+}
+
+.mini-hero {
+  height: 350px;
+  background-image: url('../images/slide1.jpg');
+
+
 }

@@ -1,9 +1,5 @@
 // Vendors
 import "jquery/dist/jquery.slim.js";
-
-import "./vendor/bootstrap";
-//import "slick-carousel";
-
 import "./vendor/slick-animation.min.js";
 import "./vendor/slick.min.js";
 import { WOW } from "wowjs";
@@ -39,17 +35,17 @@ import { WOW } from "wowjs";
     }
   });
 
-  //Menu On Hover
+  // //Menu On Hover
 
-  $("body").on("mouseenter mouseleave", ".nav-item", function (e) {
-    if ($(window).width() > 750) {
-      var _d = $(e.target).closest(".nav-item");
-      _d.addClass("show");
-      setTimeout(function () {
-        _d[_d.is(":hover") ? "addClass" : "removeClass"]("show");
-      }, 1);
-    }
-  });
+  // $("body").on("mouseenter mouseleave", ".nav-item", function (e) {
+  //   if ($(window).width() > 750) {
+  //     var _d = $(e.target).closest(".nav-item");
+  //     _d.addClass("show");
+  //     setTimeout(function () {
+  //       _d[_d.is(":hover") ? "addClass" : "removeClass"]("show");
+  //     }, 1);
+  //   }
+  // });
 
   //slick
   $("#main-slider").slick({
@@ -69,5 +65,15 @@ import { WOW } from "wowjs";
   $(".body-overlay").on("click", () => {
     $(".drawer").removeClass("open");
     $(".body-overlay").fadeOut();
+  });
+
+  $(".custom-dropdown").on("click", function (e) {
+    e.preventDefault();
+    $(this).toggleClass("show");
+    e.stopPropagation();
+  });
+
+  $("body").on("click", () => {
+    $(".custom-dropdown").removeClass("show");
   });
 })(jQuery);

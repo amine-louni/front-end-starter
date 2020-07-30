@@ -1,4 +1,5 @@
 // JavaScript
+
 import "./scripts/main";
 
 // Styles

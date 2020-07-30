@@ -12,6 +12,10 @@ const PATHS = {
 module.exports = {
   entry: "./src/index.js",
   stats: "minimal",
+  //...
+  externals: {
+    jquery: "jQuery",
+  },
   output: {
     path: path.resolve(__dirname, "../build"),
     filename: "./js/index.bundle.js",
@@ -88,18 +92,29 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-    }),
     new HtmlWebpackPlugin({
       template: "./src/html/index.html",
       filename: "index.html",
       hash: true,
     }),
     new HtmlWebpackPlugin({
-      template: "./src/html/elements.html",
-      filename: "elements.html",
+      template: "./src/html/contact.html",
+      filename: "contact.html",
+      hash: true,
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/html/about.html",
+      filename: "about.html",
+      hash: true,
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/html/contact.html",
+      filename: "contact.html",
+      hash: true,
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/html/archive.html",
+      filename: "archive.html",
       hash: true,
     }),
 

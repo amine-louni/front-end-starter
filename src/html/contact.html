@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <title>Front end Starter</title>
+    <meta name="description" content="" />
+    ${require('./partials/head.html')}
+  </head>
+  <body>
+    <main>
+      ${require('./partials/header.html')}
+      <section class="mini-hero position-relative">
+        <div class="overlay overlay-primary"></div>
+        <div class="container h-100 overlay-container">
+          <div class="d-flex h-100 align-items-center justify-content-center">
+            <div class="mini-hero__content text-white">
+              <h1 class="text-uppercase mb-4">contactez nous</h1>
+              <nav aria-label="breadcrumb" class="bg-transparent">
+                <ol class="breadcrumb breadcrumb-bullet bg-transparent pl-0">
+                  <li class="breadcrumb-item">
+                    <a href="#" class="text-uppercase"
+                      ><i class="fal fa-home"></i> Accueil</a
+                    >
+                  </li>
+
+                  <li
+                    aria-current="page"
+                    class="breadcrumb-item active text-uppercase"
+                  >
+                    contactez nous
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    ${require('./partials/footer.html')}
+  </body>
+</html>
