@@ -35,18 +35,6 @@ import { WOW } from "wowjs";
     }
   });
 
-  // //Menu On Hover
-
-  // $("body").on("mouseenter mouseleave", ".nav-item", function (e) {
-  //   if ($(window).width() > 750) {
-  //     var _d = $(e.target).closest(".nav-item");
-  //     _d.addClass("show");
-  //     setTimeout(function () {
-  //       _d[_d.is(":hover") ? "addClass" : "removeClass"]("show");
-  //     }, 1);
-  //   }
-  // });
-
   //slick
   $("#main-slider").slick({
     arrows: true,
@@ -60,15 +48,13 @@ import { WOW } from "wowjs";
   // Toggle drawer
   $("#drawer-toggler").on("click", () => {
     $(".drawer").addClass("open");
-    $(".body-overlay").fadeIn();
   });
-  $(".body-overlay").on("click", () => {
+
+  $("#drawer-close").on("click", function () {
     $(".drawer").removeClass("open");
-    $(".body-overlay").fadeOut();
   });
 
   $(".custom-dropdown").on("click", function (e) {
-    e.preventDefault();
     $(this).toggleClass("show");
     e.stopPropagation();
   });

@@ -1,41 +1,46 @@
 <header>
   <nav class="navbar navbar-expand-md navbar-light bg-light py-1">
-    <div id="drawer-toggler" class="mr-3 d-block d-md-none ripple">
-      <i class="fas fa-bars"></i>
-    </div>
-    <a class="navbar-brand" href="#">Navbar</a>
+    <div class="container">
+      <div id="drawer-toggler" class="mr-3 d-block d-md-none">
+        <i class="fal fa-bars"></i>
+      </div>
+      <a class="navbar-brand" href="#">Navbar</a>
 
-    <div class="collapse navbar-collapse ml-auto">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item text-uppercase p-2 active">
-          <a class="nav-link" href="../index.html"
-            >Accueil <span class="sr-only">(current)</span></a
-          >
-        </li>
-        <li class="nav-item text-uppercase p-2 custom-dropdown">
-          <a class="nav-link custom-dropdown-toggle" href="#" role="button">
-            nos produits
-          </a>
-          <div class="custom-dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item text-uppercase p-2">
-          <a class="nav-link" href="../about.html">a propos</a>
-        </li>
-        <li class="nav-item text-uppercase p-2">
-          <a class="nav-link" href="../contact.html">Contactez-nous</a>
-        </li>
-      </ul>
+      <div class="collapse navbar-collapse ml-auto">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item text-uppercase p-2 active">
+            <a class="nav-link" href="../index.html"
+              >Accueil <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item text-uppercase p-2 custom-dropdown">
+            <a class="nav-link custom-dropdown-toggle" href="#" role="button">
+              nos produits
+            </a>
+            <div class="custom-dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item text-uppercase p-2">
+            <a class="nav-link" href="../about.html">a propos</a>
+          </li>
+          <li class="nav-item text-uppercase p-2">
+            <a class="nav-link" href="../contact.html">Contactez-nous</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
   <aside class="drawer shadow-lg d-flex flex-column">
-    <div class="drawer__logo p-5 bg-white text-center">
-      Logo
+    <div
+      class="drawer__logo p-3 bg-white d-flex align-items-center justify-content-between"
+    >
+      <img src="../../images/logo.png" height="90" />
+      <i id="drawer-close" class="fal fa-times fa-2x"></i>
     </div>
     <nav class="">
       <ul class="flex-column list-unstyled">
@@ -93,14 +98,14 @@
   >
     <a
       href="#"
-      class="d-inline-flex flex-column align-items-center text-dark ripple text-decoration-none"
+      class="d-inline-flex flex-column align-items-center text-dark text-decoration-none"
     >
       <i class="fal fa-home"></i>
       <small>Home</small>
     </a>
     <a
       href="#"
-      class="d-inline-flex flex-column align-items-center text-dark ripple text-decoration-none"
+      class="d-inline-flex flex-column align-items-center text-dark text-decoration-none"
     >
       <i class="fal fa-info-square"></i>
       <small>About</small>
@@ -108,7 +113,7 @@
 
     <a
       href="#"
-      class="d-inline-flex flex-column align-items-center text-dark ripple text-decoration-none"
+      class="d-inline-flex flex-column align-items-center text-dark text-decoration-none"
     >
       <i class="fal fa-paper-plane"></i>
       <small>Contact</small>
