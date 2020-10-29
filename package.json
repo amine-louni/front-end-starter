@@ -3,15 +3,13 @@
   "description": "",
   "keywords": [],
   "version": "2.0.0",
-  "author": "Marcin Dobroszek <marcin@silversite.pl>",
+  "author": "Amine louni",
   "repository": {
     "type": "git",
-    "url": "git://github.com/silversite/HTML-Starter-v2.git"
+
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/silversite/HTML-Starter-v2/issues"
-  },
+
   "main": "index.js",
   "scripts": {
     "serve": "webpack-dev-server  --config  webpack/webpack.dev.js",
