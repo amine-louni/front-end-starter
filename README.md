@@ -47,47 +47,8 @@ Now you have everything you need to run the build process.
 #### Build commands
 
 - `bower install slick-animation` - let´s you easy animate your elements which are contained in your Slick.
-- `yarn start` or `npm run start` ─ compile assets when file changes are made, start [webpack-dev-server](https://github.com/webpack/webpack-dev-server) session
+- `yarn serve` or `npm run start` ─ compile assets when file changes are made, start [webpack-dev-server](https://github.com/webpack/webpack-dev-server) session
 - `yarn build` or `npm run build` ─ compile and optimize (the files in your src directory) for production
-
-## Structure
-
-Shorten directories and files structure which you'll see after build:
-
-```shell
-front-end-starter/
-├── src/                 # template assets
-│   ├── fonts/              # place template fonts files here
-│   ├── html/               # template HTML files
-│   │  ├── partials/        # common parts of HTML code
-│   │  │  └── [...]
-│   │  └── index.html       # default HTML skeleton
-│   ├── images/             # template images files
-│   │  └── [...]
-│   ├── scripts/            # template javascript files
-│   │  ├── vendor/          # necessary parts of frameworks and libs
-│   │  │  └── [...]         # Bootstrap, FontAwesome, jQuery
-│   │  └── main.js          # main javascript file that references JS source files
-│   ├── scss/               # template styles
-│   │  ├── [...]            # Simple Sass architecture folders
-│   │  └── main.scss        # main Sass file that references scss source files
-│   ├── index.js            # entry point of template
-│   └── [...]               # miscellaneous
-├── dist/                   # output folder with production build (don't edit)
-│   ├── css/                # output styles
-│   ├── images/             # output images
-│   ├── js/                 # output javascripts
-│   ├── index.html          # homepage
-│   └── [...]               # miscellaneous
-├── node_modules/           # Node.js packages (don't edit)
-│   └── [...]
-├── .babelrc                # Babel configuration file
-├── .eslintrc.js            # ESLint configuration file
-├── package.json            # Node.js dependencies and scripts
-├── webpack.config.js       # Webpack configuration file
-├── yarn.lock               # Yarn lock file (don't edit)
-└── [...]                   # other...
-```
 
 ## License
 
