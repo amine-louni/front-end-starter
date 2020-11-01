@@ -46,7 +46,6 @@ Now you have everything you need to run the build process.
 
 #### Build commands
 
-- `bower install slick-animation` - let´s you easy animate your elements which are contained in your Slick.
 - `yarn serve` or `npm run start` ─ compile assets when file changes are made, start [webpack-dev-server](https://github.com/webpack/webpack-dev-server) session
 - `yarn build` or `npm run build` ─ compile and optimize (the files in your src directory) for production
 
